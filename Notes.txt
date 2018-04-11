@@ -1,0 +1,85 @@
+Controller - communicates between the users action and the website.
+view - is what the users sees
+model - communicates between the database and Controller
+Content
+1. Work to be done
+2. Database
+3. Login  And Register
+4. Add Edit Deleted Books
+5. Index Page / Home Page
+6. Security Issue
+7. Solution
+8. NOTES
+
+
+***************************
+*     WORK TO BE DONE     *
+***************************
+1.1
+
+****************************
+*         DATABASE         *
+****************************
+2.1
+
+****************************
+*           Login          *
+*          Register        *
+****************************
+3.1 Make Login Form
+  3.1.1 Layout of Login Form
+  3.1.2 PDO Login
+  3.1.3 Update UserStatus
+  3.1.3 Login success Alert
+3.2 Make Register Form
+  3.2.1 Layout of Register Form
+  3.2.2 PDO Login
+  3.2.3 Update UserStatus
+  3.2.3 Login success Alert
+****************************
+*        Add Book          *
+*        Edit Books        *
+*        Deleted Books     *
+****************************
+4.1 Make Add New Book Form
+  4.1.1 Layout of Add Book Form
+  4.1.2 PDO Insert
+  4.1.3 Who Was it last modified by
+  4.1.4 Alert For Fail Or Success
+  4.1.5 Display New Book In The Book Shelf.
+4.2 Make Add Updated Book Form
+  4.2.1 Layout of Updated Book Information Form
+  4.2.2 PDO Select
+  4.2.3 PDO Updated
+  4.2.4 Who Was it last modified by
+  4.2.5 Alert For Fail Or Success
+  4.2.6 Display Updated Book on The Book Shelf.
+4.3 Make Add New Book Form
+  4.3.1 Layout of Job Form
+  4.3.2 PDO Deleted Statement
+  4.3.3 Who Was it last modified by
+  4.3.4 Ask Are You Sure You Want To Deleted Book .....
+  4.3.5 Remove Book In The Book Shelf.
+****************************
+*        index.php         *
+****************************
+5.1 Display Bookshelf
+5.2 Register a herf link
+5.3 Login a herf link
+5.4 Modal For full of Book Information
+5.5 Clock Feature in a include file.
+
+****************************
+*      Security Issue      *
+****************************
+6.1
+
+****************************
+*         Solution         *
+****************************
+7.1
+
+****************************
+*          NOTES           *
+****************************
+Modal Is Hidden in Modal.php
