@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2018 at 12:19 PM
+-- Generation Time: Apr 15, 2018 at 01:31 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -64,6 +64,7 @@ CREATE TABLE `book` (
   `BookTitle` varchar(255) NOT NULL,
   `OriginalTitle` varchar(255) DEFAULT NULL,
   `YearofPublication` int(4) NOT NULL DEFAULT '0',
+  `Cover` varchar(50) DEFAULT 'default.png',
   `Genre` varchar(30) NOT NULL,
   `MillionsSold` int(10) UNSIGNED NOT NULL,
   `LanguageWritten` varchar(30) NOT NULL,
@@ -74,19 +75,19 @@ CREATE TABLE `book` (
 -- Dumping data for table `book`
 --
 
-INSERT INTO `book` (`BookID`, `BookTitle`, `OriginalTitle`, `YearofPublication`, `Genre`, `MillionsSold`, `LanguageWritten`, `AuthorID`) VALUES
-(1, 'Don Quixote', 'El Ingenioso Hidalgo Don Quixote de la Mancha', 1605, 'Novel', 500, 'Spanish', 1),
-(2, 'A Tale of Two Cities', 'A Tale of Two Cities', 1859, 'Historical Fiction', 200, 'English', 2),
-(3, 'The Lord of the Rings', 'The Lord of the Rings', 1954, 'Fantasy/Adventure', 150, 'English', 3),
-(4, 'The Litle Prince', 'Le Petit Prince', 1943, 'Fable', 142, 'French', 4),
-(5, 'Harry Potter and the Sorcerer\'s Stone', 'Harry Potter and the Sorcerer\'s Stone', 1997, 'Fantasy Fiction', 107, 'English', 5),
-(6, 'And Then There Were None', 'Ten Little Niggers', 1939, 'Mystery', 100, 'English', 6),
-(7, 'The Dream of the Red Chamber', 'The Story of the Stone', 1792, 'Novel', 100, 'Chinese', 7),
-(8, 'The Hobbit ', 'There and Back Again', 1937, 'High Fantasy', 100, 'English', 3),
-(9, 'She: A History of Adventure', 'She', 1886, 'FIction', 100, 'English', 8),
-(10, 'The Lion, the Witch and the Wardrobe', 'The Lion, the Witch and the Wardrobe', 1950, 'Fantasy', 85, 'English ', 9),
-(11, 'test', 'test', 9999, 'test', 9, 'test', 10),
-(12, '1', '1', 2010, 'earth', 1, 'earth', 10);
+INSERT INTO `book` (`BookID`, `BookTitle`, `OriginalTitle`, `YearofPublication`, `Cover`, `Genre`, `MillionsSold`, `LanguageWritten`, `AuthorID`) VALUES
+(1, 'Don Quixote', 'El Ingenioso Hidalgo Don Quixote de la Mancha', 1605, 'default.png', 'Novel', 500, 'Spanish', 1),
+(2, 'A Tale of Two Cities', 'A Tale of Two Cities', 1859, 'default.png', 'Historical Fiction', 200, 'English', 2),
+(3, 'The Lord of the Rings', 'The Lord of the Rings', 1954, 'default.png', 'Fantasy/Adventure', 150, 'English', 3),
+(4, 'The Litle Prince', 'Le Petit Prince', 1943, 'default.png', 'Fable', 142, 'French', 4),
+(5, 'Harry Potter and the Sorcerer\'s Stone', 'Harry Potter and the Sorcerer\'s Stone', 1997, 'default.png', 'Fantasy Fiction', 107, 'English', 5),
+(6, 'And Then There Were None', 'Ten Little Niggers', 1939, 'default.png', 'Mystery', 100, 'English', 6),
+(7, 'The Dream of the Red Chamber', 'The Story of the Stone', 1792, 'default.png', 'Novel', 100, 'Chinese', 7),
+(8, 'The Hobbit ', 'There and Back Again', 1937, 'default.png', 'High Fantasy', 100, 'English', 3),
+(9, 'She: A History of Adventure', 'She', 1886, 'default.png', 'FIction', 100, 'English', 8),
+(10, 'The Lion, the Witch and the Wardrobe', 'The Lion, the Witch and the Wardrobe', 1950, 'default.png', 'Fantasy', 85, 'English ', 9),
+(11, 'test', 'test', 9999, 'default.png', 'test', 9, 'test', 10),
+(12, '1', '1', 2010, 'default.png', 'earth', 1, 'earth', 10);
 
 -- --------------------------------------------------------
 

@@ -10,7 +10,7 @@
       <div class="modal-body" style="padding:40px 50px;">
         <form role="form" class="" action="../Model/login_process.php" method="POST">
           <div class="form-group">
-            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+            <label for="Email"><span class="glyphicon glyphicon-user"></span> Email</label>
             <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" value="test@test.com">
           </div>
           <div class="form-group">

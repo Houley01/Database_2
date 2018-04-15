@@ -11,7 +11,7 @@
 		<!-- Books Shelf -->
 		<div class="row">
 			<h2 class="heading">Books</h2>
-
+			<?php include 'include/Admin_BookShelf.php'; ?>
 		</div>
 
 		<hr>

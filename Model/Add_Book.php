@@ -10,7 +10,7 @@
   die();
 
   $conn = dbConnect();
-  $stmt = $conn->prepare($JobRequest_sql);
+  $stmt = $conn->prepare($AddBook_sql);
   $stmt->execute();
   header('location: ../View/Success_Page.php');
  ?>

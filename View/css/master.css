@@ -23,6 +23,12 @@ h3 {
   margin: 0 !important;
 }
 
+figure {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
 footer {
   position: fixed;
   right: 0;
