@@ -50,4 +50,11 @@ $(document).ready(function() {
 		$("#RegisterModal").modal();
 	});
 });
+
+// Modal Book Infomation For pre-login users
+$(document).ready(function() {
+	$("#Open").click(function() {
+		$("#LoginBookModal").modal();
+	});
+});
 </script>

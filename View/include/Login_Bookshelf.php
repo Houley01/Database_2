@@ -14,15 +14,16 @@
    $count = 0;
     foreach ($table as $table) {
       $count++;
+      echo '<a value="'.$table["BookID"].'"onclick="OpenBook(this)" data-toggle="modal" data-target="#LoginBookModal">';
       echo '<div class="BookCover">';
       echo '  <figure>';
       echo '  <img src="images/BookCover/'. $table["Cover"].'">';
       echo '  <figcaption>';
         echo $table['BookTitle'];
       echo '  </figcaption>';
-
         echo '  </figure>';
   echo '</div>';
+  echo '</a>';
  }
 }
 ?>
