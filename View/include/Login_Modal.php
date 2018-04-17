@@ -70,7 +70,7 @@
 </div>
 
 
-<!-- RegisterModal -->
+<!-- Book Information Modal -->
 <div class="modal fade" id="LoginBookModal" role="dialog">
   <div class="modal-dialog">
 
