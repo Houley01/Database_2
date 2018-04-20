@@ -11,11 +11,11 @@
         <form role="form" class="" action="../Model/login_process.php" method="POST">
           <div class="form-group">
             <label for="Email"><span class="glyphicon glyphicon-user"></span> Email</label>
-            <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" value="test@test.com">
+            <input type="text" class="form-control" name="SignInEmail" id="SignInEmail" placeholder="Email" value="test@test.com">
           </div>
           <div class="form-group">
             <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-            <input type="password" class="form-control" name="user_pass" id="user_pass" placeholder="Enter password" value="password">
+            <input type="password" class="form-control" name="Sign_In_user_pass" id="Sign_In_user_pass" placeholder="Enter password" value="password">
           </div>
           <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
         </form>
@@ -43,19 +43,19 @@
         <form role="form" class="" action="../Model/Register.php" method="POST">
           <div class="form-group">
             <label for="usrname">First Name</label>
-            <input type="text" class="form-control" name="F.Name" id="F.Name" placeholder="First Name">
+            <input type="text" class="form-control" name="FName" id="FName" placeholder="First Name">
           </div>
           <div class="form-group">
             <label for="usrname">Last Name</label>
-            <input type="text" class="form-control" name="L.Name" id="L.Name" placeholder="Last Name">
+            <input type="text" class="form-control" name="LName" id="LName" placeholder="Last Name">
           </div>
           <div class="form-group">
             <label for="Email">Email</label>
-            <input type="email" class="form-control" name="Email" id="Email" placeholder="Email" onchange="CheckEmail(this.value)">
+            <input type="email" class="form-control" name="RegisterEmail" id="RegisterEmail" placeholder="Email" onchange="CheckEmail(this.value)">
           </div>
           <div class="form-group">
             <label for="psw">Password</label>
-            <input type="password" class="form-control" name="user_pass" id="user_pass" placeholder="Password">
+            <input type="password" class="form-control" name="Register_user_pass" id="Register_user_pass" placeholder="Password">
           </div>
           <button type="submit" class="btn btn-success btn-block">Register</button>
         </form>

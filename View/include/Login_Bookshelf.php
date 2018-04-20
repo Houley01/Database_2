@@ -19,11 +19,11 @@
       echo '  <figure>';
       echo '  <img src="images/BookCover/'. $table["Cover"].'">';
       echo '  <figcaption>';
-        echo $table['BookTitle'];
+      echo $table['BookTitle'];
       echo '  </figcaption>';
-        echo '  </figure>';
-  echo '</div>';
-  echo '</button>';
+      echo '  </figure>';
+      echo '</div>';
+      echo '</button>';
  }
 }
 ?>

@@ -83,3 +83,8 @@ Content
 *          NOTES           *
 ****************************
 Modal Is Hidden in Modal.php
+
+When Making an account, you need an admin to enable the account. by changine UserStatus In database to '2'
+Email
+test@test.com
+password

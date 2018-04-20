@@ -4,9 +4,9 @@ include '_Connection.php';
 	header('Content-Type: application/json');
 
 		$LoginBookModal = "SELECT * FROM book
-		INNER JOIN author ON author.AuthorID = book.AuthorID
-		INNER JOIN bookplot ON bookplot.BookID = book.BookID
-		INNER JOIN bookranking ON bookranking.BookID = book.BookID
+		INNER JOIN author ON book.AuthorID = author.AuthorID
+		INNER JOIN bookplot ON book.BookPlotID = bookplot.BookPlotID
+		INNER JOIN bookranking ON book.RankingID = bookranking.RankingID
 		 WHERE book.BookID = '" . $BookNum . "' ;";
 		$conn = dbConnect();
 		$stmt = $conn->prepare($LoginBookModal);
