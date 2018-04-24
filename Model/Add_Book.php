@@ -15,7 +15,7 @@
     $BooksSold = $_POST['Millions_Sold'];
 }
 if( empty($_POST['Language_Written_In']) ) {
-  $Language = Unknown;
+  $Language = 'Unknown';
 } else {
   $Language = $_POST['Language_Written_In'];
 }
@@ -23,13 +23,13 @@ if( empty($_POST['Language_Written_In']) ) {
 
   $AddBook_sql = "INSERT INTO book (BookID, BookTitle, OriginalTitle, YearofPublication, Genre, MillionsSold, LanguageWritten, AuthorID)
   VALUES
-  (NULL, '" . $_POST['Book_Title'] . "' ,  '" . $_POST['Original_Title'] . "' , '" . $_POST['Year_Of_Publication'] . "' , '" . $_POST['Genre'] . "' , '" . $_POST['Millions_Sold'] . "' , '" . $_POST['Language_Written_In'] . "' , '" . $_POST['Author'] . "'  );";
+  (NULL, '" . $BookTitle . "' ,  '" . $OTitle . "' , '" . $YOP . "' , '" . $Gener . "' , '" . $BooksSold . "' , '" . $Language . "' , '" . $Author . "'  );";
 
-  print_r($AddBook_sql);
-  die();
+ print_r($AddBook_sql);
+  // die();
 
   $conn = dbConnect();
   $stmt = $conn->prepare($AddBook_sql);
   $stmt->execute();
-  header('location: ../View/Success_Page.php');
+  header('location: ../View/');
  ?>
