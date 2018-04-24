@@ -14,7 +14,7 @@
    $count = 0;
     foreach ($table as $table) {
       $count++;
-      echo '<button class="NON_Button_LOOK" value="'.$table["BookID"].'"onclick="OpenBook(this)" data-toggle="modal" data-target="#LoginBookModal">';
+      echo '<button class="NON_Button_LOOK" value="'.$table["BookID"].'"onclick="HomeOpenBook(this)" data-toggle="modal" data-target="#LoginBookModal">';
       echo '<div class="BookCover">';
       echo '  <figure>';
       echo '  <img src="images/BookCover/'. $table["Cover"].'">';
