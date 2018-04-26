@@ -7,19 +7,16 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 name="BoldBookTitle" id="BoldBookTitle"></h4>
       </div>
-      <div class="modal-body" style="padding:40px 50px;">
+      <form class="" action="../Model/EditBooks.php" method="POST">
+        <div class="modal-body" style="padding:40px 50px;">
           <div class="form-group">
-            <input hidden type="text" name="BookID" id="BookID" value="">
+            <input hidden type="text" name="BookID" id="BookID">
             <label for="Book Name">Book Title</label>
             <input type="text" class="form-control" name="BookTitle" id="BookTitle">
           </div>
           <div class="form-group">
-            <label for="Author Name">Author's Name</label>
-            <input type="text" class="form-control" name="AuthorName" id="AuthorName">
-          </div>
-          <div class="form-group">
             <label for="Books Genre">Genre</label>
-            <input type="tex" class="form-control" name="Genre" id="Genre">
+            <input type="text" class="form-control" name="Genre" id="Genre">
           </div>
           <div class="form-group">
             <label for="">Language Written In</label>
@@ -34,17 +31,18 @@
             <input type="text" class="form-control" name="YearOfPublication" id="YearOfPublication">
           </div>
           <div class="form-group">
-            <label for="Book Summary">Book Summary</label>
-            <textarea class="form-control" name="Summary" id="Summary" rows="8" cols="80"></textarea>
+            <label for="Book Summary">Book Cover File Name</label>
+            <input type="text" class="form-control" name="BookCover" id="BookCover">
           </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Updated</button>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success btn-default pull-left" name="EditButton" value="Updated"><span class="glyphicon glyphicon-ok"></span> Updated</button>
 
-        <button type="button" class="btn btn-light btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+          <button type="button" class="btn btn-light btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
 
-        <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-trash"></span> Remove</button>
-      </div>
+          <button type="submit" class="btn btn-danger btn-default pull-left" name="EditButton" value="Delete"><span class="glyphicon glyphicon-trash"></span> Remove</button>
+        </div>
+      </form>
     </div>
 
   </div>

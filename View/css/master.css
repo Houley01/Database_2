@@ -13,6 +13,15 @@
   padding-top: 48px;
 }
 
+.NON_Button_LOOK {
+  border: 0px;
+  padding: 5px;
+  padding-bottom: 20px;
+  width: 215px;
+  float: left;
+  word-wrap: normal;
+}
+
 .same_line {
   float: left;
   margin-right: 5px;

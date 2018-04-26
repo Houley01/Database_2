@@ -17,8 +17,8 @@
   <div class="row">
     <h2 class="heading"></h2>
     <div class="container">
-      <form class="" action="../Model/Add_Book.php" method="post">
-        <input type="text" hidden name="Username" value="">
+      <form class="" action="../Model/Add_Book_TO_DB.php" method="post">
+        <input type="text" hidden name="Username">
 
         <div class="row">
           <div class="row_heading">
@@ -60,7 +60,7 @@
           </div>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Year Of Publication</span>
-            <input type="number" required  class="form-control" placeholder="Year Of Publication" aria-describedby="basic-addon1" id="Year_Of_Publication" name="Year_Of_Publication">
+            <input type="number" required  class="form-control" placeholder="e.g. 2000" aria-describedby="basic-addon1" id="Year_Of_Publication" name="Year_Of_Publication" pattern="[0-9]{4}">
           </div>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Genre</span>
@@ -72,7 +72,7 @@
           </div>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Millions Sold</span>
-            <input type="text" required class="form-control" placeholder="How Many Millions have Been Sold" aria-describedby="basic-addon1" id="Millions_Sold" name="Millions_Sold">
+            <input type="number" required class="form-control" placeholder="How Many Millions have Been Sold" aria-describedby="basic-addon1" id="Millions_Sold" name="Millions_Sold" pattern="[0-9]">
           </div>
         </div>
 

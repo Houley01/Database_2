@@ -2,15 +2,29 @@ Controller - communicates between the users action and the website.
 view - is what the users sees
 model - communicates between the database and Controller
 Content
+****************************
+*       Information        *
+*          Need            *
+****************************
+filter_var(clean( ), FILTER_SANITIZE_STRING)
 
+
+Email = test@test.com
+Password = password
+
+****************************
+*          Pages           *
+*          DONE            *
+****************************
+ Registration, _connection,
+ Edit Books, Add Book, _Session, Delete Books DONE
 ****************************
 *        Marking           *
 *        Criteria          *
 ****************************
-
 ****************************
 *          PART 1          *
-*       8 OUT OF 12        *
+*      11 OUT OF 12        *
 ****************************
 
 1.	The database provided has been modified to include book cover images [DONE]
@@ -19,22 +33,22 @@ Content
 4.	Create modular header and footer sections (include or required)  [DONE]
 5.	Create the login and registration pages  [DONE]
 6.	Write the necessary PHP PDO code to connect to the database [DONR]
-7.	Validate the form input (HTML5 validation is sufficient)
-8.	Sanitise all form input before using it in the database – use appropriate PHP functions to filter the data
+7.	Validate the form input (HTML5 validation is sufficient) [DONE]
+8.	Sanitise all form input before using it in the database – use appropriate PHP functions to filter the data [DONE]
 9.	Write PHP PDO code to allow an admin person to register and login  [DONE]
 10.	The PASSWORD_HASH() function will be used to store the password  [DONE]
 11.	Comment and indent the code appropriately
-12.	Use appropriate ERROR mode and try catch statements
+12.	Use appropriate ERROR mode and try catch statements [DONE]
 
 ****************************
 *          PART 2          *
-*       2 OUT OF 6         *
+*       4 OUT OF 6         *
 ****************************
 
 13.	Write the necessary PHP PDO code to select and display all books in the database with the corresponding details. The output must be properly formatted and must be responsive.   [DONE]
 14.	Write the necessary PHP PDO code to Add new books to the database. This includes all tables.   [DONE]
-15.	Write the necessary PHP PDO code to Update the selected book
-16.	Write the necessary PHP PDO code to Delete the selected book
+15.	Write the necessary PHP PDO code to Update the selected book [DONE]
+16.	Write the necessary PHP PDO code to Delete the selected book [DONE]
 17.	Comment and indent the code appropriately
 18.	Use appropriate ERROR mode and try catch statements
 

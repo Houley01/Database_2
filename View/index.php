@@ -15,19 +15,16 @@ switch ($_SESSION['UserStatus']) {
   case 0:
     include 'include/Login_Nav.php';
     include 'include/Login_Body.php';
-    include 'include/Login_Modal.php';
     break;
 
   case 1:
     include 'include/Admin_Nav.php';
     include 'include/Admin_Body.php';
-    include 'include/Admin_Modal.php';
     break;
 
   default:
     include 'include/Login_Nav.php';
     include 'include/Login_Body.php';
-    include 'include/Login_Modal.php';
     break;
 }
  ?>
