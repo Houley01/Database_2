@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2018 at 02:24 PM
+-- Generation Time: Apr 27, 2018 at 05:54 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -79,7 +79,7 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`BookID`, `BookTitle`, `OriginalTitle`, `YearofPublication`, `Cover`, `Genre`, `MillionsSold`, `LanguageWritten`, `AuthorID`, `RankingID`, `BookPlotID`) VALUES
-(1, 'Don Quixote', 'El Ingenioso Hidalgo Don Quixote de la Mancha', 1605, 'DonQuixote.jpg', 'Novel', 500, 'Spanish', 1, 1, 1),
+(1, 'Don Quixote', 'El Ingenioso Hidalgo Don Quixote de la Mancha', 1605, 'DonQuixote.jpg', 'Novel', 0, 'Unknown', 1, 1, 1),
 (2, 'A Tale of Two Cities', 'A Tale of Two Cities', 1859, 'aTaleofTwoCities.jpg', 'Historical Fiction', 200, 'English', 2, 2, 2),
 (3, 'The Lord of the Rings', 'The Lord of the Rings', 1954, 'default.png', 'Fantasy/Adventure', 150, 'English', 3, 3, 3),
 (4, 'The Litle Prince', 'Le Petit Prince', 1943, 'theLittlePrince.jpg', 'Fable', 142, 'French', 4, 4, 4),
@@ -97,7 +97,7 @@ INSERT INTO `book` (`BookID`, `BookTitle`, `OriginalTitle`, `YearofPublication`,
 (16, 'Return to Canifis', 'Runescape Return to Canifis', 2011, 'default.png', 'Fantasy Fiction', 5, 'English', 999, 999, 999),
 (17, 'Legacy of Blood', 'RuneScape: Legacy of Blood', 2012, 'default.png', 'Fantasy Fiction', 1, 'English', 999, 999, 999),
 (18, 'Legends of Marithia: Book 1 - Prophecies Awakening', 'Legends of Marithia', 2009, 'default.png', 'Fantasy Fiction', 1, 'English', 999, 999, 999),
-(19, 'kill', NULL, 0, 'she.jpg', 'kill', 0, 'Unknown', 999, 999, 999);
+(19, 'Test Remove', 'Remove test', 0, 'she.jpg', 'Test', 0, 'Unknown', 999, 999, 999);
 
 -- --------------------------------------------------------
 
@@ -174,7 +174,9 @@ CREATE TABLE `modify` (
 --
 
 INSERT INTO `modify` (`ModifyID`, `ModifyDate`, `BookID`, `UserID`) VALUES
-(1, '2018-04-26 00:00:00', 19, 1);
+(2, '2018-04-27 00:00:00', 1, 1),
+(3, '2018-04-27 00:00:00', 1, 1),
+(4, '2018-04-27 00:00:00', 19, 1);
 
 -- --------------------------------------------------------
 
@@ -244,8 +246,8 @@ ALTER TABLE `bookranking`
 --
 ALTER TABLE `modify`
   ADD PRIMARY KEY (`ModifyID`),
-  ADD KEY `FK_UserID#1` (`UserID`),
-  ADD KEY `FK_BookID#3` (`BookID`);
+  ADD KEY `FK_BookID#3` (`BookID`),
+  ADD KEY `FK_UserID#1` (`UserID`);
 
 --
 -- Indexes for table `user`
@@ -285,13 +287,13 @@ ALTER TABLE `bookranking`
 -- AUTO_INCREMENT for table `modify`
 --
 ALTER TABLE `modify`
-  MODIFY `ModifyID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ModifyID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `UserID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `UserID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
@@ -309,8 +311,8 @@ ALTER TABLE `book`
 -- Constraints for table `modify`
 --
 ALTER TABLE `modify`
-  ADD CONSTRAINT `FK_BookID#3` FOREIGN KEY (`BookID`) REFERENCES `book` (`BookID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `FK_UserID#1` FOREIGN KEY (`UserID`) REFERENCES `user` (`UserID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_BookID#3` FOREIGN KEY (`BookID`) REFERENCES `book` (`BookID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_UserID#1` FOREIGN KEY (`UserID`) REFERENCES `user` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

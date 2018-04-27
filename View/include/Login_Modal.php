@@ -11,11 +11,11 @@
         <form role="form" class="" action="../Model/login_process.php" method="POST">
           <div class="form-group">
             <label for="Email"><span class="glyphicon glyphicon-user"></span> Email</label>
-            <input type="text" class="form-control" name="SignInEmail" id="SignInEmail" placeholder="Email" value="test@test.com" required>
+            <input type="text" class="form-control" name="SignInEmail" id="SignInEmail" placeholder="Email" required>
           </div>
           <div class="form-group">
             <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-            <input type="password" class="form-control" name="Sign_In_user_pass" id="Sign_In_user_pass" placeholder="Enter password" value="password" required>
+            <input type="password" class="form-control" name="Sign_In_user_pass" id="Sign_In_user_pass" placeholder="Enter password" required>
           </div>
           <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
         </form>

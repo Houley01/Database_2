@@ -2,6 +2,7 @@
   include 'include/header.php';       // Header Information
   include 'include/Admin_Access.php'; // http Redirect if do not have Admin_Access
   include '../Model/_Connection.php'; // Connection File
+  include '../Model/Functions.php'; // SQL Functions
 ?>
 <div class="jumbotron">
   <div class="container">
@@ -30,17 +31,11 @@
               <option disabled selected>Who Is The Author </option>
 
               <?php
-
-              $Author = "SELECT * FROM `author`;";
-              $conn = dbConnect();
-              $stmt = $conn->prepare($Author);
-              $stmt->execute();
-              $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-              for ($loop = 0; $loop < count($result); $loop++) {
-                echo '<option value="' . $result[$loop]['AuthorID'] . '"  Name=""> ' . $result[$loop]['Name'] . ' ' . $result[$loop]['Surname'] . '</option>';
-              }
-              echo "</select>";
+                $Author = SelectAuthor();
+                foreach ($Author as $Author) {
+                  echo '<option value="' . $Author['AuthorID'] . '"  Name=""> ' . $Author['Name'] . ' ' . $Author['Surname'] . '</option>';
+                }
+            echo "</select>";
               ?>
           </div>
         </div>
